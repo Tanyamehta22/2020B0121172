@@ -4,12 +4,7 @@ import OneTrain from '../pages/OneTrain';
 import AllTrains from '../pages/AllTrains';
 function App() {
   return (
-   <Router>
-      <Switch>
-        <Route exact path="/" component={AllTrains} />
-        <Route path="/train/:trainId" component={OneTrain} />
-      </Switch>
-    </Router>
+    <AllTrains/>
   )
 }
 
