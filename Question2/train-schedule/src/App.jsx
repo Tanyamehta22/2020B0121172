@@ -1,11 +1,17 @@
-import { useState } from 'react'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import OneTrain from '../pages/OneTrain';
 import AllTrains from '../pages/AllTrains';
+
 function App() {
   return (
-    <AllTrains/>
-  )
+    <Router>
+      <Routes>
+        <Route path="/" element={<AllTrains />} />
+        <Route path="/train/:trainId" element={<OneTrain />} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;
